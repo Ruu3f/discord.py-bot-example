@@ -6,7 +6,7 @@ from discord.ext import commands
 from colorama import Fore #colors for text
 
 intents = discord.Intents.all() #you can change intents as per your usage, on default i've enabled every intent
-bot = commands.Bot(command_prefix = "!", intents = intents) 
+bot = commands.Bot(command_prefix = "!", intents = intents) #you can change prefix to anything here if you dont want the ! prefix
 
 @bot.event
 async def on_ready():
