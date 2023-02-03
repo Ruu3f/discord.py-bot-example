@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from psutil import Process
 
-class BotSysCog(commands.Cog):
+class cog(commands.Cog): #this is the class
     def __init__(self, bot):
         self.bot = bot
         
