@@ -4,6 +4,11 @@ os.system("pip install -r requirements.txt") #install packages, a requirements f
 import discord
 from discord.ext import commands
 from colorama import Fore #colors for text (opt)
+from dotenv import load_dotenv #importing dotenv and from it importing load_dotenv
+
+load_dotenv() #loading dotenv
+
+TOKEN = os.getenv('DISCORD_TOKEN') #change the variable name in .env file if you are renaming it here
 
 intents = discord.Intents.all() #you can change intents as per your usage, on default i've enabled every intent
 bot = commands.Bot(command_prefix = "!", intents = intents) #you can change prefix to anything here if you dont want the ! prefix
@@ -17,4 +22,4 @@ async def on_ready():
 
 bot.load_extension("cog") #load cogs (you can load multiple by copy pasting this line again and put the name of the cog without .py)
 
-bot.run("TOKEN") #your bots token
+bot.run(TOKEN) #your bots token
