@@ -8,7 +8,7 @@ class cog(commands.Cog): #this is the class
         
     @commands.command(name="ping", description="get a response.") #name="ping" is the name of the command, description"get a response" is the description/help of a command
     async def ping(self, ctx):
-        with open("data/config.json", "r") as f:
+        with open("data/config.json", "r") as f: #opening the config.json file
             config = json.load(f) #loading config.json to extract values from it
             msg = config["msg"] #msg value extracted from config.json
         start_time = time.time()
