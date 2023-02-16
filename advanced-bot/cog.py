@@ -8,8 +8,11 @@ class cog(commands.Cog): #this is the class
         
     @commands.command(name="ping", description="get a response.") #name="ping" is the name of the command, description"get a response" is the description/help of a command
     async def ping(self, ctx):
+        with open("data/config.json", "r") as f:
+            config = json.load(f)
+            msg = config["msg"]
         start_time = time.time()
-        embed = discord.Embed(description="Pong!", color=0x69696) #you can change the color using hex codes
+        embed = discord.Embed(description=f"Pong!\nMSG={msg}", color=0x69696) #you can change the color using hex codes
         await ctx.send(embed=embed)
 
 def setup(bot):
