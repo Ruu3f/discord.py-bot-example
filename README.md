@@ -3,6 +3,4 @@
 ### advanced-bot
 ##### Same as legacy-bot, but is more complicated, has more features with a cog, env file, json file and requirements with better UI.
 
-## Please star this repo!
-<img src="star.png">
 
